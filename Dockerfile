@@ -19,7 +19,8 @@ COPY . /app
 WORKDIR /app
 RUN npm install
 
-#WORKDIR /app/android
-#RUN gradle assembleRelease --no-daemon -Dfile.encoding=UTF-8 -Dorg.gradle.jvmargs=-Xmx1024m
+WORKDIR /app/android
+RUN gradle assembleRelease --no-daemon -Dfile.encoding=UTF-8 -Dorg.gradle.jvmargs=-Xmx1024m
 
 CMD ["echo", "Imagem personalizada com as configuracoes do Android SDK e do Gradle"]
+CMD ["npm", "start"]
