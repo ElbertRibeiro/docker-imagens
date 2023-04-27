@@ -1,9 +1,0 @@
-version: "3"
-services:
-  my-react-native-container:
-    build: .
-    container_name: my-react-native-container
-    working_dir: /app/android
-    command: gradle assembleRelease
-    volumes:
-      - "./build:/app/android/app/build/outputs/apk/release"
